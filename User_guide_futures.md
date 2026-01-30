@@ -12,8 +12,6 @@
 - **Multi-user auth** (MongoDB): админ создаёт пользователей, выдаёт роли, отключает, сбрасывает пароли
 - Пользовательские настройки и ключи (Binance/OpenAI) хранятся в MongoDB (опционально шифруются)
 
-> ⚠️ Важно про данные рынка: публичные market streams/klines берутся **только из LIVE** (server-wide).
-> DEMO/LIVE влияет только на **signed/private endpoints** (аккаунт/ордера/позиции) на уровне пользователя/бота.
 
 ---
 
@@ -97,6 +95,9 @@ Backtest запускается когда `backtestEnabled=true`. Логика 
 3) **Start**
 
 Backend автоматически поднимает User Data Stream (WS) для подписок аккаунта.
+> ⚠️ Важно про данные рынка: публичные market streams/klines берутся **только из LIVE** (server-wide).
+> DEMO/LIVE влияет только на **signed/private endpoints** (аккаунт/ордера/позиции) на уровне пользователя/бота.
+
 
 ---
 
